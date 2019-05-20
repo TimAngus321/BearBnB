@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :caves, only: [:index, :show, :new, :create, :destroy] do
     resources :reservations, only: [:new, :create, :show]
-
   end
 end
 
