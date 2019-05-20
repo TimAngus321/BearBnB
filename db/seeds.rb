@@ -15,6 +15,7 @@ User.destroy_all
 # since each cave belongs to a bear
 
 # create some fake reservation
+puts "creating users now"
 users = []
 users << User.create(email: 'baloo@bears.com', password: '123456', username: 'Baloo')
 users << User.create(email: 'winnie@bears.com', password: '123456', username: 'Winnie')
@@ -27,31 +28,86 @@ users << User.create(email: 'smokey@bears.com', password: '123456', username: 'S
 users << User.create(email: 'bubbles@bears.com', password: '123456', username: 'Bubbles')
 users << User.create(email: 'rupert@bears.com', password: '123456', username: 'Rupert')
 users << User.create(email: 'gordon@bears.com', password: '123456', username: 'Gordon')
-
-
-Cave.create(
+puts "#{User.count} users created"
+puts "creating caves now"
+caves = []
+caves << Cave.create(
   address: 'jungle',
   square_meters: 100,
   availability: true,
   occupancy: 2,
+  price_per_night: 10,
+  user_id: users.sample.id
+)
+
+caves << Cave.create(
+  address: 'forrest',
+  square_meters: 100,
+  availability: true,
+  occupancy: 2,
+  price_per_night: 10,
+  user_id: users.sample.id
+)
+caves << Cave.create(
+  address: 'marsh',
+  square_meters: 100,
+  availability: true,
+  occupancy: 2,
+  price_per_night: 10,
+  user_id: users.sample.id
+)
+caves << Cave.create(
+  address: 'underwater',
+  square_meters: 100,
+  availability: true,
+  occupancy: 2,
+  price_per_night: 10,
+  user_id: users.sample.id
+)
+
+puts "#{Cave.count} caves created"
+puts "Creating reservations now"
+
+Reservation.create(
   user_id: users.sample.id,
+  cave_id: caves.sample.id,
+  start_date: 'November',
+  end_date: 'February'
+  )
 
-)
+Reservation.create(
+  user_id: users.sample.id,
+  cave_id: caves.sample.id,
+  start_date: 'January',
+  end_date: 'March'
+  )
 
-Cave.create(
-  address: '',
-  user_id: users.sample.id
-)
-Cave.create(
-  address: '',
-  user_id: users.sample.id
-)
-Cave.create(
-  address: '',
-  user_id: users.sample.id
-)
+Reservation.create(
+  user_id: users.sample.id,
+  cave_id: caves.sample.id,
+  start_date: 'December',
+  end_date: 'March'
+  )
 
+Reservation.create(
+  user_id: users.sample.id,
+  cave_id: caves.sample.id,
+  start_date: 'October',
+  end_date: 'January'
+  )
 
+Reservation.create(
+  user_id: users.sample.id,
+  cave_id: caves.sample.id,
+  start_date: 'September',
+  end_date: 'December'
+  )
 
+Reservation.create(
+  user_id: users.sample.id,
+  cave_id: caves.sample.id,
+  start_date: 'October',
+  end_date: 'March'
+  )
 
-
+puts "#{Reservation.count} reservations created"
