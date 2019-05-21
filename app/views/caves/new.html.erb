@@ -1,0 +1,10 @@
+<h1>New Cave</h1>
+
+<%= simple_form_for(@caves) do |caves| %>
+    <%= f.input :address %>
+    <%= f.input :square_meters %>
+    <%= f.input :occupnacy %>
+    <%= f.input :availability %>
+    <%= f.input :price_per_night %>
+    <%= f.submit "search for a cave", class: "btn btn-primary" %>
+<% end %>
