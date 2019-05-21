@@ -2,10 +2,12 @@
 
 <h1>All Caves:</h1>
 <% @caves.each do |cave| %>
-<h3><%= link_to cave.address, caves_path(cave) %></h3>
-
+<h3><%= link_to cave.address, cave_path(cave) %></h3>
 
 <% end %>
 
+<h2>Add a new cave</h2>
+<br>
+<%= link_to "Add a cave!", new_cave_path, class: "btn btn-primary" %>
 
 </div>

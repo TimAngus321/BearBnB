@@ -1,3 +1,4 @@
+<div>
 <h1>Address: <%= @cave.address %></h1>
 <ul>
   <li>Square meters: <%= @cave.square_meters %> (Square Meters)</li>
@@ -8,3 +9,5 @@
 </ul>
 
 <%= link_to "Reserve", new_cave_reservation_path(@cave), class: "btn btn-primary" %>
+
+</div>
