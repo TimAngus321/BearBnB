@@ -1,0 +1,11 @@
+<h1>Reserve your cave!</h1>
+
+<%= simple_form_for([@cave, @reservation]) do |f| %>
+<%= f.input :start_date %>
+<%= f.input :end_date %>
+<%= f.submit "Reserve", class: "btn btn-primary" %>
+
+<% end %>
+
+<br>
+<%= link_to "back to caves", caves_path, class: "btn btn-primary" %>
