@@ -3,6 +3,12 @@ class ReservationsController < ApplicationController
     @cave = Cave.find(params[:id])
   end
 
+  def new
+    @reservation = Reservation.new
+    @cave = Cave.find(params[:cave_id])
+  end
+
+
   def update
 
   end
