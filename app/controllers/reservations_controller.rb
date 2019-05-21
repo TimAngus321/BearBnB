@@ -1,6 +1,7 @@
 class ReservationsController < ApplicationController
   def confirmation
-    @cave = Cave.find(params[:id])
+    @cave = Cave.find(params[:cave_id])
+    @reservation = Reservation.find(params[:id])
   end
 
   def new
@@ -14,7 +15,16 @@ class ReservationsController < ApplicationController
   end
 
   def create
-
+    @cave = Cave.find(params[:cave_id])
+    @reservation = Reservation.new(reservation_params)
+    @reservation.user = current_user
+    @reservation.cave = @cave
+    if @reservation.save
+      @cave.availability = false
+    else
+      render :new
+    end
+    redirect_to confirmation_path(@cave, @reservation)
   end
 
   # Not needed?
@@ -29,7 +39,7 @@ class ReservationsController < ApplicationController
 
   private
 
-  def cave_params
-    params.require(:reservation).permit(:address, :square_meters, :price_per_night)
+  def reservation_params
+    params.require(:reservation).permit(:start_date, :end_date)
   end
 end

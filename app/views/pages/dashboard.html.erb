@@ -1,0 +1,11 @@
+<h1>Hi <%= current_user.username %>!</h1>
+
+<ul>
+  <% current_user.reservations.each do |r| %>
+    <li>
+      <%= r.start_date %> : <%= r.end_date %>
+      <%= r.cave.address %>
+    </li>
+  <% end %>
+
+</ul>
