@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2019_05_20_130655) do
   create_table "caves", force: :cascade do |t|
     t.string "address"
     t.integer "square_meters"
-    t.boolean "availability"
+    t.boolean "availability", default: true
     t.integer "occupancy"
     t.integer "price_per_night"
     t.bigint "user_id"
@@ -52,6 +52,6 @@ ActiveRecord::Schema.define(version: 2019_05_20_130655) do
   end
 
   add_foreign_key "caves", "users"
-  add_foreign_key "reservations", "caves", column: "cave_id"
+  add_foreign_key "reservations", "caves"
   add_foreign_key "reservations", "users"
 end
