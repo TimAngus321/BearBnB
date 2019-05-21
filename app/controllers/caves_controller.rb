@@ -16,7 +16,8 @@ class CavesController < ApplicationController
     if Cave.create(cave_params)
       redirect_to caves_path
     else
-      render new
+      render :new
+    end
   end
 
   def destroy

@@ -3,7 +3,7 @@ class CreateCaves < ActiveRecord::Migration[5.2]
     create_table :caves do |t|
       t.string :address
       t.integer :square_meters
-      t.boolean :availability
+      t.boolean :availability, default: true
       t.integer :occupancy
       t.integer :price_per_night
       t.references :user, foreign_key: true
