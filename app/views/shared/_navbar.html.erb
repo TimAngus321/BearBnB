@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
+  <%= link_to caves_path, class: "navbar-brand" do %>
     <%= image_tag "https://res.cloudinary.com/beartechnologies/image/upload/v1558452206/BearBnB/bearbnb1_hrs7kx.png" %>
     <% end %>
 
@@ -13,7 +13,7 @@
       <% if user_signed_in? %>
         <li class="nav-item active">
           <!-- replace # with the wanted route to landing page or index -->
-          <%= link_to "Home", "#", class: "nav-link" %>
+          <%= link_to "Home", caves_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <!-- Peter: add BearBnB logo -->
