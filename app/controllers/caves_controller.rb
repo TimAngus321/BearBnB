@@ -1,5 +1,4 @@
 class CavesController < ApplicationController
-
   def index
     @caves = Cave.all
   end
@@ -13,7 +12,9 @@ class CavesController < ApplicationController
   end
 
   def create
-    if Cave.create(cave_params)
+    @cave = Cave.new(cave_params)
+    @cave.user = current_user
+    if @cave.save!
       redirect_to caves_path
     else
       render :new
@@ -29,6 +30,6 @@ class CavesController < ApplicationController
   private
 
   def cave_params
-    params.require(:cave).permit(:address, :square_meters, :price_per_night)
+    params.require(:cave).permit(:address, :square_meters, :price_per_night, :occupancy, :availability, :description)
   end
 end

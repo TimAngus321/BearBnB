@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2019_05_21_143607) do
   create_table "caves", force: :cascade do |t|
     t.string "address"
     t.integer "square_meters"
-    t.boolean "availability"
+    t.boolean "availability", default: true
     t.integer "occupancy"
     t.integer "price_per_night"
     t.bigint "user_id"
