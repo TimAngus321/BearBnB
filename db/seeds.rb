@@ -32,7 +32,7 @@ puts "#{User.count} users created"
 puts "creating caves now"
 caves = []
 caves << Cave.create(
-  address: 'jungle',
+  address: 'Sahara Dessert',
   square_meters: 100,
   availability: true,
   occupancy: 2,
@@ -41,7 +41,7 @@ caves << Cave.create(
 )
 
 caves << Cave.create(
-  address: 'forrest',
+  address: 'Amazon Rainforest',
   square_meters: 100,
   availability: true,
   occupancy: 2,
@@ -49,7 +49,7 @@ caves << Cave.create(
   user_id: users.sample.id
 )
 caves << Cave.create(
-  address: 'marsh',
+  address: 'Nottingham Forrest',
   square_meters: 100,
   availability: true,
   occupancy: 2,
@@ -57,13 +57,32 @@ caves << Cave.create(
   user_id: users.sample.id
 )
 caves << Cave.create(
-  address: 'underwater',
+  address: 'Yosemite',
   square_meters: 100,
   availability: true,
   occupancy: 2,
   price_per_night: 10,
   user_id: users.sample.id
 )
+
+caves << Cave.create(
+  address: 'Grand Canyon',
+  square_meters: 100,
+  availability: true,
+  occupancy: 2,
+  price_per_night: 10,
+  user_id: users.sample.id
+)
+
+caves << Cave.create(
+  address: 'North Pole',
+  square_meters: 100,
+  availability: true,
+  occupancy: 2,
+  price_per_night: 10,
+  user_id: users.sample.id
+)
+
 
 puts "#{Cave.count} caves created"
 puts "Creating reservations now"
