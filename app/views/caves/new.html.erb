@@ -1,17 +1,19 @@
-<h1>New Cave</h1>
+<div class="container" style="background-image: linear-gradient(to right, rgba(273,273,273,0.1),rgba(273,273,273,0.1)), url(https://res.cloudinary.com/beartechnologies/image/upload/v1558535744/BearBnB/photo-1556503868-012fa6d205b5_djstgg.jpg);">>
+  <h1>New Cave</h1>
 
-<%= simple_form_for(@cave) do |f| %>
-    <%= f.input :address %>
-    <%= f.input :square_meters %>
-    <%= f.input :occupancy %>
-    <%= f.input :availability %>
-    <%= f.input :price_per_night %>
-    <%= f.input :description %>
-    <%= f.submit "Add a new cave", class: "btn btn-primary"%>
-<% end %>
+  <%= simple_form_for(@cave) do |f| %>
+      <%= f.input :address %>
+      <%= f.input :square_meters %>
+      <%= f.input :occupancy %>
+      <%= f.input :availability %>
+      <%= f.input :price_per_night %>
+      <%= f.input :description %>
+      <%= f.submit "Add a new cave", class: "btn btn-primary"%>
+  <% end %>
 
-<br>
-<br>
+  <br>
+  <br>
 
-<%= link_to "back to caves", caves_path, class: "btn btn-light" %>
+  <%= link_to "back to caves", caves_path, class: "btn btn-light" %>
+</div>
 
