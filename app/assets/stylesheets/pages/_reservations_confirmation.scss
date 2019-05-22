@@ -1,0 +1,18 @@
+$box-shadow: 1px 1px 1px rbga(0,0,0,0.1);
+
+#bear {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 5px 0px 5px 390px;
+  box-shadow: $box-shadow;
+}
+
+.confirmation-card {
+  background-color: gray;
+}
+
+.confirmation-message {
+  margin-top: 25px;
+}

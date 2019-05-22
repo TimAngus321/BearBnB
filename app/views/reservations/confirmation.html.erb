@@ -1,3 +1,14 @@
-<h1>Congratulations!</h1>
-<p>You've reserved a cave in the <%= @cave.address %></p>
-<p>For <%= @reservation.start_date %> through <%= @reservation.end_date %></p>
+
+<div class="confirmation-card">
+  <img id="bear" src="https://media.giphy.com/media/muHlnG1WU9YfS/giphy.gif" alt="happy bear">
+</div>
+
+
+<div class="container">
+  <div class="confirmation-message text-center">
+    <h1>Congratulations!</h1>
+    <p>You've reserved a cave in the <%= @cave.address %></p>
+    <p>For <%= @reservation.start_date %> through <%= @reservation.end_date %></p>
+  </div>
+</div>
+
