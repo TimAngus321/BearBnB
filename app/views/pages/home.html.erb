@@ -1,2 +1,9 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://res.cloudinary.com/beartechnologies/image/upload/v1558522953/BearBnB/bearbnb_copy_lj2ejz.png);">
+  <div class="container">
+    <h1>Bear BnB <strong>brings caves</strong> to <strong>sleepy bears</strong>!</h1>
+    <p>Are you a tired and grumpy bear who needs to hibernate?</p>
+    <br>
+    <%= link_to "hibernate now!", caves_path, class: "btn btn-danger" %>
+  </div>
+</div>
+
