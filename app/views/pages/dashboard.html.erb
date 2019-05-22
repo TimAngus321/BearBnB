@@ -1,11 +1,47 @@
-<h1>Hi <%= current_user.username %>!</h1>
+<div class="title-container">
+  <div class="title-left">
+    <h1>GRRRR! Hi <%= current_user.username %>! <br>Here are your reservations:</h1>
+  </div>
+  <div class="title-right">
+    <h1>Your Dates:</h1>
+  </div>
+</div>
 
-<ul>
+<div class="reservation-container">
   <% current_user.reservations.each do |r| %>
-    <li>
-      <%= r.start_date %> : <%= r.end_date %>
-      <%= r.cave.address %>
-    </li>
+    <div class="res-card-container">
+      <div class="dashboard-card">
+        <ul>
+        <h1>Address: <%= r.cave.address %></h1>
+          <li>Square meters: <%= r.cave.square_meters %> (Square Meters)</li>
+          <li>Occupancy: <%= r.cave.occupancy %> (Bears)</li>
+          <li>Availability: <%= r.cave.availability %></li>
+          <li>description: <%= r.cave.description %></li>
+        </ul>
+      </div>
+      <div class="reservation-card">
+        <ul>
+          <li class="reservation-price">
+            <h1>Price per hibernation: <%= r.cave.price_per_night %> (Salmons)</h1>
+            </li>
+            <li class="reservation-dates">
+              <h3>From:<%= r.start_date %></h3>
+              <h3>To:<%= r.end_date %></h3>
+            </li>
+        <li class="reservation-buttons text-center">
+          <!-- <div class="edit-button">
+
+          </div> -->
+            <div class="cancel-button">
+              <%= link_to "Cancel Reservation", reservation_path(r), method: :delete, data: { confirm: "RAAWWWRR! Are you sure you want to cancel your reservation?" }, class: "btn btn-danger" %>
+            </li>
+        </ul>
+
+        </div>
+       </div>
+    </div>
   <% end %>
 
-</ul>
+
+
+</div>
