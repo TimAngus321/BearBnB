@@ -1,6 +1,7 @@
-body {
-  background-image: linear-gradient(rgba(0,0,0,0.1),rgba(1,0,0,0.1)), url("https://res.cloudinary.com/beartechnologies/image/upload/v1558522117/BearBnB/Screenshot_2019-05-22_at_12.46.02_cftptl.png");
-}
+// .show-container {
+//   margin: 20px;
+//   // background-image: linear-gradient(rgba(0,0,0,0.1),rgba(1,0,0,0.1)), url("https://res.cloudinary.com/beartechnologies/image/upload/v1558522117/BearBnB/Screenshot_2019-05-22_at_12.46.02_cftptl.png");
+// }
 
 $box-shadow: 1px 1px 1px rbga(0,0,0,0.1);
 
@@ -28,10 +29,9 @@ $box-shadow: 1px 1px 1px rbga(0,0,0,0.1);
   width: 500px;
   background-color: white;
   border-radius: 2px;
-}
-
-li {
+  li {
   padding: 5px;
+  }
 }
 
 .fish-btn {
