@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <title>TODO</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Maiden+Orange&display=swap" rel="stylesheet">
   </head>
   <body>
     <%= render 'shared/navbar' %>
@@ -18,5 +21,18 @@
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
+
+    <div class="footer">
+  <div class="footer-links">
+    <a href="https://github.com/TimAngus321/BearBnB"><i class="fab fa-github"></i></a>
+    <a href="https://www.instagram.com/beargrylls/?hl=en"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/PaddingtonBear/"><i class="fab fa-facebook"></i></a>
+    <a href="https://twitter.com/poohbearquote?lang=en"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.linkedin.com/company/ted-conferences"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    By Bears <i class="fas fa-heart"></i> For Bears
+  </div>
+</div>
   </body>
 </html>

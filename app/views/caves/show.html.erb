@@ -11,3 +11,41 @@
 <%= link_to "Reserve", new_cave_reservation_path(@cave), class: "btn btn-primary" %>
 
 </div>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md">
+      <div class="card-product-header_1">
+        <h1>Address: <%= @cave.address %></h1>
+      </div>
+
+      <div class="card-product-content">
+        <ul>
+          <li>Square meters: <%= @cave.square_meters %> (Square Meters)</li>
+          <li>Occupancy: <%= @cave.occupancy %> (Bears)</li>
+          <li>Availability: <%= @cave.availability %></li>
+          <li>Price per night: <%= @cave.price_per_night %> (Salmons)</li>
+          <li>description: <%= @cave.description %></li>
+        </ul>
+      </div>
+      <div style="display: flex; width: 100%; align-items: center; justify-content: center;">
+      <div class="card-product-btn">
+        <%= link_to new_cave_reservation_path(@cave), class: "fish-btn" do %>
+          <i class="fas fa-fish"></i>
+          <p class="fish-btn-text">Reserve</p>
+        <% end %>
+      </div>
+      </div>
+    </div>
+
+    <div class="col-lg">
+      <div>
+        <img src="https://source.unsplash.com/collection/4741378" class="cave_img" alt="Bear-cave">
+      </div>
+    </div>
+  </div>
+<!-- src="https://s1.dmcdn.net/OKX3b/x1080-bAE.jpg" A cute bear at a cave!-->
+</div>
+
+

@@ -1,0 +1,56 @@
+// .show-container {
+//   margin: 20px;
+//   // background-image: linear-gradient(rgba(0,0,0,0.1),rgba(1,0,0,0.1)), url("https://res.cloudinary.com/beartechnologies/image/upload/v1558522117/BearBnB/Screenshot_2019-05-22_at_12.46.02_cftptl.png");
+// }
+
+$box-shadow: 1px 1px 1px rbga(0,0,0,0.1);
+
+.card-product-header_1 {
+  box-shadow: $box-shadow;
+  width: 500px;
+  padding: 8px;
+  margin-bottom: 30px;
+  background-color: white;
+  border-radius: 2px;
+  color: #FC1014;
+  text-align: center;
+}
+
+.cave_img {
+  box-shadow: $box-shadow;
+  height: 500px;
+  width: 500px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.card-product-content {
+  box-shadow: $box-shadow;
+  width: 500px;
+  background-color: white;
+  border-radius: 2px;
+  li {
+  padding: 5px;
+  }
+}
+
+.fish-btn {
+  font-size: 150px;
+  color: #FC1014;
+  &:hover {
+    color: #FC8588;
+  }
+}
+
+.card-product-btn {
+  position: relative;
+}
+
+.fish-btn-text {
+  position: absolute;
+  font-size: 27px;
+  top: 91px;
+  color: white;
+  left: 9px;
+}
+
