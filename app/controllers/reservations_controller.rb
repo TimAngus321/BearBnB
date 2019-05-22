@@ -27,14 +27,10 @@ class ReservationsController < ApplicationController
     redirect_to confirmation_path(@cave, @reservation)
   end
 
-  # Not needed?
-  # def show
-  # end
-
   def destroy
     @reservation = Reservation.find(params[:id])
     @reservation.destroy
-    redirect_to caves_path
+    redirect_to dashboard_path
   end
 
   private

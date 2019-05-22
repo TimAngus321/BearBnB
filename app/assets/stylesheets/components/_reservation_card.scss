@@ -1,0 +1,35 @@
+.reservation-card {
+  height: 100%;
+  padding: 0px 25px;
+  width: 400px;
+  justify-content: center;
+  flex-grow: 1;
+
+}
+
+.reservation-card li {
+  list-style-type: none;
+}
+
+.reservation-price {
+  background-color: white;
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  border: solid 1px black,
+}
+
+.reservation-dates {
+  padding: 16px;
+  position: relative;
+  border: solid 1px black,
+}
+
+.reservation-buttons  {
+  padding: 16px;
+  position: relative;
+  border: solid 1px black;
+}
+
+

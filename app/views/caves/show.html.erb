@@ -1,3 +1,17 @@
+<div>
+<h1>Address: <%= @cave.address %></h1>
+<ul>
+  <li>Square meters: <%= @cave.square_meters %> (Square Meters)</li>
+  <li>Occupancy: <%= @cave.occupancy %> (Bears)</li>
+  <li>Availability: <%= @cave.availability %></li>
+  <li>Price per night: <%= @cave.price_per_night %> (Salmons)</li>
+  <li>description: <%= @cave.description %></li>
+</ul>
+
+<%= link_to "Reserve", new_cave_reservation_path(@cave), class: "btn btn-primary" %>
+
+</div>
+
 <div class="container">
   <div class="row">
 
@@ -33,9 +47,5 @@
   </div>
 <!-- src="https://s1.dmcdn.net/OKX3b/x1080-bAE.jpg" A cute bear at a cave!-->
 </div>
-
-
-
-
 
 
