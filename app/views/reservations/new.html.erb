@@ -3,8 +3,8 @@
     <h1>RAWWRR! Quick! Reserve <%= @cave.address %> quickly before another Bear fights you for it! </h1>
       <br>
     <%= simple_form_for ([@cave, @reservation]) do |f| %>
-    <%= f.input :start_date, :label_html => { :class => 'text-white' }, input_html: {class: "datepicker"}%>
-    <%= f.input :end_date, :label_html => { :class => 'text-white'}, input_html: {class: "datepicker" } %>
+    <%= f.input :start_date, label_html: { class: 'text-white' }, input_html: {class: "datepicker", placeholder: "dd/mm/yyyy"} %>
+    <%= f.input :end_date, label_html: { class: 'text-white'}, input_html: {class: "datepicker", placeholder: "dd/mm/yyyy" } %>
 
     <%= f.submit "Reserve", class: "btn btn-primary" %>
 
