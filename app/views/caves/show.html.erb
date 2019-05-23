@@ -3,7 +3,7 @@
 
     <div class="col-md">
       <div class="card-product-header_1">
-        <h1>Address: <%= @cave.address %></h1>
+        <h1><%= @cave.address %></h1>
       </div>
 
       <div class="card-product-content">
@@ -11,7 +11,7 @@
           <li>Square meters: <%= @cave.square_meters %> (Square Meters)</li>
           <li>Occupancy: <%= @cave.occupancy %> (Bears)</li>
           <li>Availability: <%= @cave.availability %></li>
-          <li>Price per night: <%= @cave.price_per_night %> (Salmons)</li>
+          <li>Price per night: <%= @cave.price_per_night %> <i class="fas fa-fish"></i></li>
           <li>description: <%= @cave.description %></li>
         </ul>
       </div>
@@ -27,7 +27,11 @@
 
     <div class="col-lg">
       <div>
-        <img src="https://s1.dmcdn.net/OKX3b/x1080-bAE.jpg" class="cave_img" alt="Bear-cave">
+        <% if @cave.photo == nil %>
+          <img src="https://s1.dmcdn.net/OKX3b/x1080-bAE.jpg" class="cave_img" alt="Bear-cave">
+          <% else %>
+          <%= cl_image_tag @cave.photo, class: "cave_img"%>
+        <% end %>
       </div>
     </div>
   </div>

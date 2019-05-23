@@ -1,4 +1,5 @@
 class Cave < ApplicationRecord
+  mount_uploader :photo, PhotoUploader
   belongs_to :user
   validates :address, presence: true, uniqueness: true
   validates :square_meters, presence: true
