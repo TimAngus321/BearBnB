@@ -1,10 +1,11 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1542243337-8a2c60753f6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">>
   <div class="container">
-    <h1>Reserve your cave!</h1>
+    <h1>RAWWRR! Quick! Reserve <%= @cave.address %> quickly before another Bear fights you for it! </h1>
+      <br>
+    <%= simple_form_for ([@cave, @reservation]) do |f| %>
+    <%= f.input :start_date, :label_html => { :class => 'text-white' }, input_html: {class: "datepicker"}%>
+    <%= f.input :end_date, :label_html => { :class => 'text-white'}, input_html: {class: "datepicker" } %>
 
-    <%= simple_form_for([@cave, @reservation]) do |f| %>
-    <%= f.input :start_date, :label_html => { :class => 'text-white' }%>
-    <%= f.input :end_date, :label_html => { :class => 'text-white' } %>
     <%= f.submit "Reserve", class: "btn btn-primary" %>
 
     <% end %>
@@ -12,4 +13,6 @@
     <br>
     <%= link_to "back to caves", caves_path, class: "btn btn-light" %>
   </div>
+
+
 </div>

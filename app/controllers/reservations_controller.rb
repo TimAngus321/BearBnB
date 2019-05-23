@@ -9,11 +9,6 @@ class ReservationsController < ApplicationController
     @cave = Cave.find(params[:cave_id])
   end
 
-
-  def update
-
-  end
-
   def create
     @cave = Cave.find(params[:cave_id])
     @reservation = Reservation.new(reservation_params)
