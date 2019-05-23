@@ -12,14 +12,13 @@
 
 ActiveRecord::Schema.define(version: 2019_05_23_134843) do
 
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "caves", force: :cascade do |t|
     t.string "address"
     t.integer "square_meters"
-    t.boolean "availability", default: true
+    t.boolean "availability"
     t.integer "occupancy"
     t.integer "price_per_night"
     t.bigint "user_id"
