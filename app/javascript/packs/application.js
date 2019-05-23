@@ -4,6 +4,6 @@ import "flatpickr/dist/flatpickr.min.css"
 
 flatpickr(".datepicker", {
   altInput: true,
-  altFormat: "j, F, Y",
+  altFormat: "j F, Y",
   dateFormat: "d.m.Y",
 })
