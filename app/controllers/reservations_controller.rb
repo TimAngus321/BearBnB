@@ -22,6 +22,16 @@ class ReservationsController < ApplicationController
     redirect_to confirmation_path(@cave, @reservation)
   end
 
+  def update
+    @reservation = Reservation.find(params[:id])
+    if @reservation.update(reservation_params)
+      redirect_to dashboard_path
+    else
+      render "pages/dashboard"
+    end
+  end
+
+
   def destroy
     @reservation = Reservation.find(params[:id])
     @reservation.destroy
