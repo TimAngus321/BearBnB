@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_21_143607) do
+ActiveRecord::Schema.define(version: 2019_05_23_092809) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,13 +18,14 @@ ActiveRecord::Schema.define(version: 2019_05_21_143607) do
   create_table "caves", force: :cascade do |t|
     t.string "address"
     t.integer "square_meters"
-    t.boolean "availability"
+    t.boolean "availability", default: true
     t.integer "occupancy"
     t.integer "price_per_night"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "description"
+    t.string "photo"
     t.index ["user_id"], name: "index_caves_on_user_id"
   end
 
