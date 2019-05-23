@@ -34,6 +34,6 @@ class CavesController < ApplicationController
   private
 
   def cave_params
-    params.require(:cave).permit(:address, :square_meters, :price_per_night, :occupancy, :availability, :description)
+    params.require(:cave).permit(:address, :square_meters, :price_per_night, :occupancy, :availability, :description, :photo)
   end
 end

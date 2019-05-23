@@ -1,19 +1,20 @@
 // .show-container {
 //   margin: 20px;
-//   // background-image: linear-gradient(rgba(0,0,0,0.1),rgba(1,0,0,0.1)), url("https://res.cloudinary.com/beartechnologies/image/upload/v1558522117/BearBnB/Screenshot_2019-05-22_at_12.46.02_cftptl.png");
+//   background-image: linear-gradient(rgba(0,0,0,0.1),rgba(1,0,0,0.1)), url("https://res.cloudinary.com/beartechnologies/image/upload/v1558522117/BearBnB/Screenshot_2019-05-22_at_12.46.02_cftptl.png");
 // }
 
-$box-shadow: 1px 1px 1px rbga(0,0,0,0.1);
+$box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
 
 .card-product-header_1 {
   box-shadow: $box-shadow;
   width: 500px;
   padding: 8px;
   margin-bottom: 30px;
-  background-color: #F4F4F9;
-  border-radius: 2px;
+  background-color: white;
+  border-radius: 10px;
   color: #FC1014;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .cave_img {
@@ -21,14 +22,14 @@ $box-shadow: 1px 1px 1px rbga(0,0,0,0.1);
   height: 500px;
   width: 500px;
   object-fit: cover;
-  border-radius: 2px;
+  border-radius: 10px;
 }
 
 .card-product-content {
   box-shadow: $box-shadow;
   width: 500px;
-  background-color: #F4F4F9;
-  border-radius: 2px;
+  background-color: white;
+  border-radius: 10px;
   li {
   padding: 5px;
   }
@@ -37,6 +38,7 @@ $box-shadow: 1px 1px 1px rbga(0,0,0,0.1);
 .fish-btn {
   font-size: 150px;
   color: #FC1014;
+  transition: ease-in-out 0.5s;
   &:hover {
     color: #FC8588;
   }
