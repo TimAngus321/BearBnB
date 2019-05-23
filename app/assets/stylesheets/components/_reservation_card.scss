@@ -2,6 +2,7 @@
   height: 100%;
   padding: 0px 25px;
   width: 400px;
+  height: 350px;
   justify-content: center;
   flex-grow: 1;
 
@@ -27,9 +28,10 @@
 }
 
 .reservation-buttons  {
+  display: flex;
+  justify-content: space-between;
   padding: 16px;
   position: relative;
-  border: solid 1px black;
 }
 
 

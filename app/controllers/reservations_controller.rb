@@ -9,11 +9,6 @@ class ReservationsController < ApplicationController
     @cave = Cave.find(params[:cave_id])
   end
 
-
-  def update
-
-  end
-
   def create
     @cave = Cave.find(params[:cave_id])
     @reservation = Reservation.new(reservation_params)
@@ -26,6 +21,16 @@ class ReservationsController < ApplicationController
     end
     redirect_to confirmation_path(@cave, @reservation)
   end
+
+  def update
+    @reservation = Reservation.find(params[:id])
+    if @reservation.update(reservation_params)
+      redirect_to dashboard_path
+    else
+      render "pages/dashboard"
+    end
+  end
+
 
   def destroy
     @reservation = Reservation.find(params[:id])

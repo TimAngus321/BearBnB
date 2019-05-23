@@ -1,6 +1,10 @@
 class CavesController < ApplicationController
   def index
-    @caves = Cave.all
+    if params[:query].present?
+      @caves = Cave.where("address ILIKE ?", "%#{params[:query]}%")
+    else
+      @caves = Cave.all
+    end
   end
 
   def show

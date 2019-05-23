@@ -91,7 +91,7 @@ c6 = Cave.create(
   description: "Polar Bears you'll feel right at home! For all others, don't forget! Eat well, stack up on fat and bring a pair of ear muffs!"
 )
 
-puts "creted caves without images"
+puts "created caves without images"
 
 c1.remote_photo_url = "https://res.cloudinary.com/beartechnologies/image/upload/v1558607121/BearBnB/breanna-galley-64624-unsplash_aslprr.jpg"
 c1.save
@@ -118,43 +118,43 @@ puts "Creating reservations now"
 Reservation.create(
   user_id: users.sample.id,
   cave_id: Cave.all.sample.id,
-  start_date: 'November',
-  end_date: 'February'
+  start_date: '2019-12-01',
+  end_date: '2020-02-01'
   )
 
 Reservation.create(
   user_id: users.sample.id,
   cave_id: Cave.all.sample.id,
-  start_date: 'January',
-  end_date: 'March'
+  start_date: '2019-12-01',
+  end_date: '2020-02-01'
   )
 
 Reservation.create(
   user_id: users.sample.id,
   cave_id: Cave.all.sample.id,
-  start_date: 'December',
-  end_date: 'March'
+  start_date: '2019-12-01',
+  end_date: '2020-02-01'
   )
 
 Reservation.create(
   user_id: users.sample.id,
   cave_id: Cave.all.sample.id,
-  start_date: 'October',
-  end_date: 'January'
+  start_date: '2019-12-01',
+  end_date: '2020-02-01'
   )
 
 Reservation.create(
   user_id: users.sample.id,
   cave_id: Cave.all.sample.id,
-  start_date: 'September',
-  end_date: 'December'
+  start_date: '2019-12-01',
+  end_date: '2020-02-01'
   )
 
 Reservation.create(
   user_id: users.sample.id,
   cave_id: Cave.all.sample.id,
-  start_date: 'October',
-  end_date: 'March'
+  start_date: '2019-12-01',
+  end_date: '2020-01-23'
   )
 
 puts "#{Reservation.count} reservations created"
