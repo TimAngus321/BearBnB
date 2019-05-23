@@ -25,13 +25,13 @@
             <h1>Price per hibernation: <%= r.cave.price_per_night %> (Salmons)</h1>
             </li>
             <li class="reservation-dates">
-              <h3>From:<%= r.start_date %></h3>
-              <h3>To:<%= r.end_date %></h3>
+              <h3>From: <%= r.start_date %></h3>
+              <h3>To:   <%= r.end_date %></h3>
             </li>
         <li class="reservation-buttons text-center">
-          <!-- <div class="edit-button">
+          <div class="edit-button">
 
-          </div> -->
+          </div>
             <div class="cancel-button">
               <%= link_to "Cancel Reservation", reservation_path(r), method: :delete, data: { confirm: "RAAWWWRR! Are you sure you want to cancel your reservation?" }, class: "btn btn-danger" %>
             </li>
