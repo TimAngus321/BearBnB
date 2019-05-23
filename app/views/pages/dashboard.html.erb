@@ -1,50 +1,51 @@
-<div class="title-container">
-  <div class="title-left">
-    <h1>GRRRR! Hi <%= current_user.username %>! <br>Here are your reservations:</h1>
-  </div>
-  <div class="title-right">
-    <h1>Your Dates:</h1>
-  </div>
-</div>
-
-<div class="reservation-container">
-  <% current_user.reservations.order(:start_date).each do |r| %>
-    <div class="res-card-container">
-      <div class="dashboard-card">
-        <ul>
-        <h1>Address: <%= r.cave.address %></h1>
-          <li>Square meters: <%= r.cave.square_meters %> (Square Meters)</li>
-          <li>Occupancy: <%= r.cave.occupancy %> (Bears)</li>
-          <li>Availability: <%= r.cave.availability %></li>
-          <li>description: <%= r.cave.description %></li>
-        </ul>
-      </div>
-      <div class="reservation-card">
-        <ul>
-          <li class="reservation-price">
-            <h1>Price per hibernation: <%= r.cave.price_per_night %> (Salmons)</h1>
-            </li>
-            <li class="reservation-dates">
-              <%= simple_form_for (r) do |f| %>
-    <%= f.input :start_date, as: :string, label_html: { class: 'text-black' }, input_html: {class: "datepicker"} %>
-    <%= f.input :end_date, as: :string, label_html: { class: 'text-black'}, input_html: {class: "datepicker" } %>
-
-
-        <li class="reservation-buttons text-center">
-          <div class="edit-button">
-            <%= f.submit "Edit Reservation", class: "btn btn-primary" %>
-              <% end %>
-          </div>
-            <div class="cancel-button">
-              <%= link_to "Cancel Reservation", reservation_path(r), method: :delete, data: { confirm: "RAAWWWRR! Are you sure you want to cancel your reservation?" }, class: "btn btn-danger" %>
-            </li>
-        </ul>
-
-        </div>
-       </div>
+<div class="container">
+  <div class="row">
+    <div class="title-left" class="col-6">
+      <h1>GRRRR! Hi <%= current_user.username %>! <br>Here are your reservations:</h1>
     </div>
-  <% end %>
+    <div class="title-right" class="col-6">
+      <h1>Your Dates:</h1>
+    </div>
+  </div>
+
+  <div class="row" >
+    <% current_user.reservations.order(:start_date).each do |r| %>
+        <div class="dashboard-card" class="col-6" >
+          <ul>
+          <h1>Address: <%= r.cave.address %></h1>
+            <li>Square meters: <%= r.cave.square_meters %> (Square Meters)</li>
+            <li>Occupancy: <%= r.cave.occupancy %> (Bears)</li>
+            <li>Availability: <%= r.cave.availability %></li>
+            <li>description: <%= r.cave.description %></li>
+          </ul>
 
 
+            <div class="reservation-price" class="col-6">
+              <ul>
+                <li>
+              <h1>Price per hibernation: <%= r.cave.price_per_night %> (Salmons)</h1>
+              </li>
+              <li class="reservation-dates">
+                <%= simple_form_for (r) do |f| %>
+      <%= f.input :start_date, as: :string, label_html: { class: 'text-black' }, input_html: {class: "datepicker"} %>
+      <%= f.input :end_date, as: :string, label_html: { class: 'text-black'}, input_html: {class: "datepicker" } %>
 
+
+          <li class="reservation-buttons text-center">
+            <div class="edit-button">
+              <%= f.submit "Edit Reservation", class: "btn btn-primary" %>
+                <% end %>
+            </div>
+              <div class="cancel-button">
+                <%= link_to "Cancel Reservation", reservation_path(r), method: :delete, data: { confirm: "RAAWWWRR! Are you sure you want to cancel your reservation?" }, class: "btn btn-danger" %>
+              </li>
+          </ul>
+        </div>
+
+          </div>
+         </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
 </div>
