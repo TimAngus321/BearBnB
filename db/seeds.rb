@@ -90,42 +90,42 @@ puts "Creating reservations now"
 Reservation.create(
   user_id: users.sample.id,
   cave_id: caves.sample.id,
-  start_date: 'November',
-  end_date: 'February'
+  start_date: '2019-12-01',
+  end_date: '2020-02-01'
   )
 
 Reservation.create(
   user_id: users.sample.id,
   cave_id: caves.sample.id,
-  start_date: 'January',
-  end_date: 'March'
+  start_date: '2019-12-01',
+  end_date: '2020-02-01'
   )
 
 Reservation.create(
   user_id: users.sample.id,
   cave_id: caves.sample.id,
-  start_date: 'December',
-  end_date: 'March'
+  start_date: '2019-12-01',
+  end_date: '2020-02-01'
   )
 
 Reservation.create(
   user_id: users.sample.id,
   cave_id: caves.sample.id,
-  start_date: 'October',
-  end_date: 'January'
+  start_date: '2019-12-01',
+  end_date: '2020-02-01'
   )
 
 Reservation.create(
   user_id: users.sample.id,
   cave_id: caves.sample.id,
-  start_date: 'September',
-  end_date: 'December'
+  start_date: '2019-12-01',
+  end_date: '2020-02-01'
   )
 
 Reservation.create(
   user_id: users.sample.id,
   cave_id: caves.sample.id,
-  start_date: 'October',
+  start_date: '2019-12-01',
   end_date: 'March'
   )
 
