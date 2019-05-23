@@ -8,7 +8,7 @@
 </div>
 
 <div class="reservation-container">
-  <% current_user.reservations.each do |r| %>
+  <% current_user.reservations.order(:start_date).each do |r| %>
     <div class="res-card-container">
       <div class="dashboard-card">
         <ul>
@@ -25,12 +25,15 @@
             <h1>Price per hibernation: <%= r.cave.price_per_night %> (Salmons)</h1>
             </li>
             <li class="reservation-dates">
-              <h3>From: <%= r.start_date %></h3>
-              <h3>To:   <%= r.end_date %></h3>
-            </li>
+              <%= simple_form_for (r) do |f| %>
+    <%= f.input :start_date, label_html: { class: 'text-white' }, input_html: {class: "datepicker", placeholder: "dd/mm/yyyy"} %>
+    <%= f.input :end_date, label_html: { class: 'text-white'}, input_html: {class: "datepicker", placeholder: "dd/mm/yyyy" } %>
+
+
         <li class="reservation-buttons text-center">
           <div class="edit-button">
-
+            <%= f.submit "Edit Reservation", class: "btn btn-primary" %>
+              <% end %>
           </div>
             <div class="cancel-button">
               <%= link_to "Cancel Reservation", reservation_path(r), method: :delete, data: { confirm: "RAAWWWRR! Are you sure you want to cancel your reservation?" }, class: "btn btn-danger" %>
