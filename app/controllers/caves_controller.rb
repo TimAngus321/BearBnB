@@ -1,9 +1,16 @@
 class CavesController < ApplicationController
   def index
     if params[:query].present?
-      @caves = Cave.where("address ILIKE ?", "%#{params[:query]}%")
+      @caves = Cave.where("address ILIKE ?", "%#{params[:query]}%").where.not(latitude: nil, longitude: nil)
     else
-      @caves = Cave.all
+      @caves = Cave.all.where.not(latitude: nil, longitude: nil)
+    end
+
+    @markers = @caves.map do |cave|
+      {
+        lat: cave.latitude,
+        lng: cave.longitude
+      }
     end
   end
 
