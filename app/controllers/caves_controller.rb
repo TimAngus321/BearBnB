@@ -9,7 +9,9 @@ class CavesController < ApplicationController
     @markers = @caves.map do |cave|
       {
         lat: cave.latitude,
-        lng: cave.longitude
+        lng: cave.longitude,
+        infoWindow: render_to_string(partial: "infoWindow", locals: { cave: cave }),
+        image_url: helpers.asset_url('https://res.cloudinary.com/beartechnologies/image/upload/v1558696738/BearBnB/mappin2_vbuyr3.png')
       }
     end
   end
