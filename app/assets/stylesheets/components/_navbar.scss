@@ -1,6 +1,7 @@
 .navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+    justify-content: space-between;
+    background: white;
+    border-bottom: 1px solid;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -33,4 +34,8 @@ img {
 
 .form-control {
    border-radius: 25px;
+}
+
+.navbar-brand img {
+  border-radius: 5px;
 }
