@@ -1,41 +1,49 @@
+<div class="card-product-image">
+  <% if @cave.photo == nil %>
+    <img src="https://s1.dmcdn.net/OKX3b/x1080-bAE.jpg" class="cave_img" alt="Bear-cave">
+    <% else %>
+    <%= cl_image_tag @cave.photo, class: "cave_img"%>
+  <% end %>
+</div>
+
 <div class="container">
   <div class="row">
 
     <div class="col-md">
       <div class="card-product-header_1">
+        <h3>Some Beary interesting things about</h3>
         <h1><%= @cave.address %></h1>
       </div>
-
       <div class="card-product-content">
         <ul>
           <li>Square meters: <%= @cave.square_meters %> (Square Meters)</li>
           <li>Occupancy: <%= @cave.occupancy %> (Bears)</li>
           <li>Availability: <%= @cave.availability %></li>
-          <li>Price per night: <%= @cave.price_per_night %> <i class="fas fa-fish"></i></li>
+          <li>Price per night: <%= @cave.price_per_night %> <i class="fas fa-fish fish-animation"></i></li>
           <li>description: <%= @cave.description %></li>
         </ul>
       </div>
-      <div style="display: flex; width: 100%; align-items: center; justify-content: center;">
-      <div class="card-product-btn">
-        <%= link_to new_cave_reservation_path(@cave), class: "fish-btn" do %>
-          <i class="fas fa-fish"></i>
-          <p class="fish-btn-text">Reserve</p>
-        <% end %>
-      </div>
-      </div>
     </div>
 
-    <div class="col-lg">
-      <div>
-        <% if @cave.photo == nil %>
-          <img src="https://s1.dmcdn.net/OKX3b/x1080-bAE.jpg" class="cave_img" alt="Bear-cave">
-          <% else %>
-          <%= cl_image_tag @cave.photo, class: "cave_img"%>
-        <% end %>
+    <div class="col-md">
+      <div class="card-product-fish-h2">
+        <h2>If you're looking to hibernate just grab this delicous, scrumptious, woobbly Salmon!</h2>
+      </div>
+      <div class="card-product-arrow">
+        <i class="fas fa-arrow-down"></i>
+      </div>
+      <div style="display: flex; width: 100%; align-items: center; justify-content: center;">
+        <div class="card-product-btn">
+          <%= link_to new_cave_reservation_path(@cave), class: "fish-btn" do %>
+            <div class="wobble">
+              <i class="fas fa-fish"></i>
+              <p class="fish-btn-text">Reserve</p>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
-<!-- src="https://s1.dmcdn.net/OKX3b/x1080-bAE.jpg" A cute bear at a cave!-->
 </div>
 
 
