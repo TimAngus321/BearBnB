@@ -18,16 +18,16 @@ ActiveRecord::Schema.define(version: 2019_05_23_134843) do
   create_table "caves", force: :cascade do |t|
     t.string "address"
     t.integer "square_meters"
-    t.boolean "availability"
+    t.boolean "availability", default: true
     t.integer "occupancy"
     t.integer "price_per_night"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "description"
+    t.string "photo"
     t.float "latitude"
     t.float "longitude"
-    t.string "photo"
     t.index ["user_id"], name: "index_caves_on_user_id"
   end
 
