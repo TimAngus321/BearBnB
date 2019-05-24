@@ -53,6 +53,7 @@ $box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
   width: 500px;
   background-color: $light-gray;
   border-radius: 10px;
+  margin-bottom: 25px;
   li {
   padding: 5px;
   list-style: none;
@@ -97,4 +98,13 @@ $box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
   100%{transform: rotate(0deg)}
 }
 
-
+.woobbly-card {
+  box-shadow: $box-shadow;
+  width: 500px;
+  height: 350px;
+  padding: 8px;
+  background-color: $light-gray;
+  border-radius: 10px;
+  color: black;
+  margin-bottom: 150px;
+}

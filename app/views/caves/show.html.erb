@@ -12,7 +12,9 @@
     <div class="col-md">
       <div class="card-product-header_1">
         <h3>Some Beary interesting things about</h3>
-        <h1><%= @cave.address %></h1>
+        <div>
+          <h3>our</h3><h1><%= @cave.address %></h1><h3>cave</h3>
+        </div>
       </div>
       <div class="card-product-content">
         <ul>
@@ -20,26 +22,28 @@
           <li>Occupancy: <%= @cave.occupancy %> (Bears)</li>
           <li>Availability: <%= @cave.availability %></li>
           <li>Price per night: <%= @cave.price_per_night %> <i class="fas fa-fish fish-animation"></i></li>
-          <li>description: <%= @cave.description %></li>
+          <li><%= @cave.description %></li>
         </ul>
       </div>
     </div>
 
     <div class="col-md">
-      <div class="card-product-fish-h2">
-        <h2>If you're looking to hibernate just grab this delicous, scrumptious, woobbly Salmon!</h2>
-      </div>
-      <div class="card-product-arrow">
-        <i class="fas fa-arrow-down"></i>
-      </div>
-      <div style="display: flex; width: 100%; align-items: center; justify-content: center;">
-        <div class="card-product-btn">
-          <%= link_to new_cave_reservation_path(@cave), class: "fish-btn" do %>
-            <div class="wobble">
-              <i class="fas fa-fish"></i>
-              <p class="fish-btn-text">Reserve</p>
-            </div>
-          <% end %>
+      <div class="woobbly-card">
+        <div class="card-product-fish-h2">
+          <h2>If you're looking to hibernate just grab this delicous, scrumptious, woobbly Salmon!</h2>
+        </div>
+        <div class="card-product-arrow">
+          <i class="fas fa-arrow-down"></i>
+        </div>
+        <div style="display: flex; width: 100%; align-items: center; justify-content: center;">
+          <div class="card-product-btn">
+            <%= link_to new_cave_reservation_path(@cave), class: "fish-btn" do %>
+              <div class="wobble">
+                <i class="fas fa-fish"></i>
+                <p class="fish-btn-text">Reserve</p>
+              </div>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
