@@ -1,4 +1,6 @@
-
+.content-index {
+  display: flex;
+}
 
 .card-trip {
   overflow: hidden;
@@ -18,6 +20,7 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  padding: 5px;
 }
 
 .card-trip p {
@@ -38,7 +41,37 @@
 .card-trip-infos .card-trip-user {
   position: absolute;
   right: 16px;
-  top: -20px;
+  top: -188px;
   width: 40px;
 }
 
+.cards-index {
+  flex: 1;
+  padding-left: 10px;
+  padding-right: 15px;
+}
+
+canvas {
+  padding-right: 10px;
+  border-radius: 10px;
+}
+
+.fish-animation {
+  animation-name: fishwobble;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fishwobble {
+  0%{transform: rotate(0deg)}
+  50%{transform: rotate(20deg)}
+  100%{transform: rotate(0deg)}
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+// a {
+//   color: black:
+// }
