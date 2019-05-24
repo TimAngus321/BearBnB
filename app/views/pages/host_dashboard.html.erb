@@ -12,7 +12,7 @@
     <div class="col-12 col-sm-6">
       <div class="card-details" >
         <h1>Address: <%= h.address %></h1>
-        <h1>Price per hibernation: <%= h.price_per_night %> <i class= “ fas fa-fish fish-animation”></i></h1>
+        <h1>Price per hibernation: <%= h.price_per_night %> <i class="fas fa-fish fish-animation"></i></h1>
         <p>Size: <%= h.square_meters %>m<sup>2</sup></%> </p>
         <p>Occupancy: <%= h.occupancy %> Bears</p>
         <p>Availability: <%= h.availability %></p>
@@ -24,8 +24,20 @@
       <!-- </div> -->
     </div>
     </div>
+
+
+  <div class="col-12 col-sm-6">
+    <div class="dashboard-card" style="background-image: linear-gradient(to left, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cloudinary_url(h.photo) %>);" >
+
+    </div>
   </div>
-  <% end %>
+<% end %>
+
+
+
+
+
+
 
 </div>
-
+</div>
