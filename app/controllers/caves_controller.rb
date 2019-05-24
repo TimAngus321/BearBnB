@@ -34,6 +34,19 @@ class CavesController < ApplicationController
     end
   end
 
+  def edit
+    @cave = Cave.find(params[:id])
+  end
+
+  def update
+    @cave = Cave.find(params[:id])
+    if @cave.update(cave_params)
+      redirect_to host_dashboard_path
+    else
+      render "pages/host_dashboard"
+    end
+  end
+
   def destroy
     @cave = Cave.find(params[:id])
     @cave.destroy

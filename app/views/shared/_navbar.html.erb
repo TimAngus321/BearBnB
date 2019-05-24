@@ -37,6 +37,7 @@
         <!-- add wahtever route you want... to the 2 dropdown-items below!  -->
         <%= link_to "Find caves", caves_path, class: "dropdown-item" %>
         <%= link_to "My reservations", dashboard_path, class: "dropdown-item" %>
+        <%= link_to "My Caves", host_dashboard_path, class: "dropdown-item" %>
         <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
       </div>
     </li>
