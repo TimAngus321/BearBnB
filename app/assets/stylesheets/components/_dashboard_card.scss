@@ -1,9 +1,12 @@
 .dashboard-card {
+  display: grid;
+  grid-template-columns: 6fr;
+  grid-gap: 5px;
   background-image: linear-gradient(to left, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://images.unsplash.com/photo-1542243337-8a2c60753f6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
   background-size: cover;
   background-position: center;
-  height: 350px;
-  width: 400px;
+  height: 100%;
+  width: 100%;
   padding: 0 25px;
   display: flex;
   align-items: center;
