@@ -1,56 +1,52 @@
 <div class="container">
   <div class="row">
-    <div class="title-left" class="col-12 col-sm-6">
+    <div class="col-12 col-sm-6">
+    <div class="title-left">
       <h1>GRRRR! Hi <%= current_user.username %>! <br>Here are your reservations:</h1>
     </div>
-    <div class="title-right" class="col-12 col-sm-6">
+  </div>
+  <div class="col-12 col-sm-6">
+    <div class="title-right">
       <h1>Your Dates:</h1>
     </div>
   </div>
+</div>
 
 
-  <div class="row" >
     <% current_user.reservations.order(:start_date).each do |r| %>
+  <div class="row mt-4" >
     <div class="col-12 col-sm-6">
         <div class="dashboard-card" >
-          <ul>
           <h1>Address: <%= r.cave.address %></h1>
-            <li>Square meters: <%= r.cave.square_meters %> (Square Meters)</li>
-            <li>Occupancy: <%= r.cave.occupancy %> (Bears)</li>
-            <li>Availability: <%= r.cave.availability %></li>
-            <li>description: <%= r.cave.description %></li>
-          </ul>
+            <p>Size: <%= r.cave.square_meters %>m<sup>2</sup></%> </p>
+            <p>Occupancy: <%= r.cave.occupancy %> Bears</p>
+            <p>Availability: <%= r.cave.availability %></p>
+            <p>description: <%= r.cave.description %></p>
         </div>
       </div>
 
           <div class="col-12 col-sm-6">
             <div class="card-details">
-              <ul>
-                <li>
-              <h1>Price per hibernation: <%= r.cave.price_per_night %> (Salmons)</h1>
-              </li>
-              <li class="reservation-dates">
+              <h1>Price per hibernation: <%= r.cave.price_per_night %> <i class= “ fas fa-fish fish-animation”></i></h1>
+
+
+              <div class="reservation-dates">
                 <%= simple_form_for (r) do |f| %>
       <%= f.input :start_date, as: :string, label_html: { class: 'text-black' }, input_html: {class: "datepicker"} %>
       <%= f.input :end_date, as: :string, label_html: { class: 'text-black'}, input_html: {class: "datepicker" } %>
+          </div>
 
-
-          <li class="reservation-buttons text-center">
+          <div class="reservation-buttons text-center">
             <div class="edit-button">
               <%= f.submit "Edit Reservation", class: "btn btn-primary" %>
                 <% end %>
             </div>
               <div class="cancel-button">
                 <%= link_to "Cancel Reservation", reservation_path(r), method: :delete, data: { confirm: "RAAWWWRR! Are you sure you want to cancel your reservation?" }, class: "btn btn-danger" %>
-              </li>
-          </ul>
-        </div>
-
+              </div>
+              </div>
+            </div>
           </div>
-         </div>
-       </div>
-      </div>
-    <% end %>
+        </div>
+      <% end %>
     </div>
-  </div>
-</div>
