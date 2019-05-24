@@ -1,29 +1,27 @@
-// .title-container {
-//   display: flex;
-//   justify-content: space-around;
-//   align-items: center;
+.container{
 
-// }
+}
 
-// .reservation-container {
-//   display: flex;
-//   flex-direction: column;
-// }
+.title-right {
+  display: grid;
+  grid-template-columns: 6fr;
+  grid-gap: 5px;
+  height: 100%;
+  width: 100%;
+  padding: 16px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
 
-// .res-card-container {
-
-// }
-
-
-
-// // .title-right {
-// //   margin: 50px;
-// //   width: 400px;
-// //   height: 100%;
-// // }
-
-// // .title-left {
-// //   margin: 50px;
-// //   width: 400px;
-// //   height: 100%;
-// // }
+.title-left {
+  display: grid;
+  grid-template-columns: 6fr;
+  grid-gap: 5px;
+  height: 100%;
+  width: 100%;
+  padding: 16px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
