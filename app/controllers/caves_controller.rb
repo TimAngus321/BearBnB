@@ -9,7 +9,9 @@ class CavesController < ApplicationController
     @markers = @caves.map do |cave|
       {
         lat: cave.latitude,
-        lng: cave.longitude
+        lng: cave.longitude,
+        infoWindow: render_to_string(partial: "infoWindow", locals: { cave: cave }),
+        image_url: helpers.asset_url('https://res.cloudinary.com/beartechnologies/image/upload/v1558696738/BearBnB/mappin2_vbuyr3.png')
       }
     end
   end
@@ -29,6 +31,19 @@ class CavesController < ApplicationController
       redirect_to caves_path
     else
       render :new
+    end
+  end
+
+  def edit
+    @cave = Cave.find(params[:id])
+  end
+
+  def update
+    @cave = Cave.find(params[:id])
+    if @cave.update(cave_params)
+      redirect_to host_dashboard_path
+    else
+      render "pages/host_dashboard"
     end
   end
 

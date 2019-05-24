@@ -1,0 +1,11 @@
+<%= simple_form_for(@cave) do |f| %>
+    <%= f.input :address %>
+    <%= f.input :square_meters %>
+    <%= f.input :occupancy %>
+    <%= f.input :availability %>
+    <%= f.input :price_per_night %>
+    <%= f.input :description %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+    <%= f.submit "Submit", class: "btn btn-primary"%>
+<% end %>

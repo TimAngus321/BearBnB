@@ -1,10 +1,30 @@
 <div class="container">
   <div class="row">
     <div class="col-12 col-sm-6">
-      <h1>Your Caves:</h1>
+      <div class="title-left">
+        <h1>Your Caves:</h1>
+      </div>
     </div>
   </div>
 
+  <% current_user.caves.each do |h| %>
+  <div class="row mt-4" >
+    <div class="col-12 col-sm-6">
+      <div class="card-details" >
+        <h1>Address: <%= h.address %></h1>
+        <h1>Price per hibernation: <%= h.price_per_night %> <i class= “ fas fa-fish fish-animation”></i></h1>
+        <p>Size: <%= h.square_meters %>m<sup>2</sup></%> </p>
+        <p>Occupancy: <%= h.occupancy %> Bears</p>
+        <p>Availability: <%= h.availability %></p>
+        <p>description: <%= h.description %></p>
 
+      <%= link_to 'Edit Cave', edit_cave_path(h), class: "btn btn-primary" %>
+      <!-- <div class="cancel-button"> -->
+        <%= link_to "Delete Cave", cave_path(h), method: :delete, data: { confirm: "RAAWWWRR! Are you sure you want to delete your cave?" }, class: "btn btn-danger" %>
+      <!-- </div> -->
+    </div>
+    </div>
+  </div>
+  <% end %>
 
 </div>
