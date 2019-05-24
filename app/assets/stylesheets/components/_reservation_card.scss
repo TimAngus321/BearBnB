@@ -1,8 +1,11 @@
 .reservation-card {
+  display: grid;
+  grid-template-columns: 6fr;
+  grid-gap: 5px;
   height: 100%;
   padding: 0px 25px;
-  width: 400px;
-  height: 350px;
+  height: 100%;
+  width: 100%;
   justify-content: center;
   flex-grow: 1;
 
@@ -12,7 +15,7 @@
   list-style-type: none;
 }
 
-.reservation-price {
+.card-details {
   background-color: white;
   padding: 16px;
   display: flex;

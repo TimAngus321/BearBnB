@@ -1,16 +1,17 @@
 <div class="container">
   <div class="row">
-    <div class="title-left" class="col-6">
+    <div class="title-left" class="col-12 col-sm-6">
       <h1>GRRRR! Hi <%= current_user.username %>! <br>Here are your reservations:</h1>
     </div>
-    <div class="title-right" class="col-6">
+    <div class="title-right" class="col-12 col-sm-6">
       <h1>Your Dates:</h1>
     </div>
   </div>
 
   <div class="row" >
     <% current_user.reservations.order(:start_date).each do |r| %>
-        <div class="dashboard-card" class="col-6" >
+    <div class="col-12 col-sm-6">
+        <div class="dashboard-card" >
           <ul>
           <h1>Address: <%= r.cave.address %></h1>
             <li>Square meters: <%= r.cave.square_meters %> (Square Meters)</li>
@@ -18,9 +19,11 @@
             <li>Availability: <%= r.cave.availability %></li>
             <li>description: <%= r.cave.description %></li>
           </ul>
+        </div>
+      </div>
 
-
-            <div class="reservation-price" class="col-6">
+          <div class="col-12 col-sm-6">
+            <div class="card-details">
               <ul>
                 <li>
               <h1>Price per hibernation: <%= r.cave.price_per_night %> (Salmons)</h1>
@@ -44,6 +47,7 @@
 
           </div>
          </div>
+       </div>
       </div>
     <% end %>
     </div>
