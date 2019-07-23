@@ -1,4 +1,5 @@
 class CavesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index]
   def index
     if params[:query].present?
       @caves = Cave.where("address ILIKE ?", "%#{params[:query]}%").where.not(latitude: nil, longitude: nil)
