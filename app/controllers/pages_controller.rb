@@ -8,4 +8,9 @@ class PagesController < ApplicationController
     @user = current_user
   end
 
+  def host_dashboard
+    @user = current_user
+  end
+
+
 end

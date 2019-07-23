@@ -16,18 +16,20 @@
     <% current_user.reservations.order(:start_date).each do |r| %>
   <div class="row mt-4" >
     <div class="col-12 col-sm-6">
-        <div class="dashboard-card" >
+        <div class="dashboard-card" style="background-image: linear-gradient(to left, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cloudinary_url(r.cave.photo) %>);" >
+
           <h1>Address: <%= r.cave.address %></h1>
             <p>Size: <%= r.cave.square_meters %>m<sup>2</sup></%> </p>
             <p>Occupancy: <%= r.cave.occupancy %> Bears</p>
             <p>Availability: <%= r.cave.availability %></p>
-            <p>description: <%= r.cave.description %></p>
+            <p>Description: <%= r.cave.description %></p>
         </div>
       </div>
 
           <div class="col-12 col-sm-6">
             <div class="card-details">
-              <h1>Price per hibernation:  <%= r.cave.price_per_night %> <i class= "fas fa-fish fish-animation"></i></h1>
+
+              <h1>Price per hibernation: <%= r.cave.price_per_night %> <i class="fas fa-fish fish-animation"></i></h1>
 
 
               <div class="reservation-dates">
