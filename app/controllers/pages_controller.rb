@@ -11,6 +11,4 @@ class PagesController < ApplicationController
   def host_dashboard
     @user = current_user
   end
-
-
 end
